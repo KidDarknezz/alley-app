@@ -18,9 +18,9 @@
         </q-card-section>
 
         <q-card-section class="q-pt-none">
-          <q-input dense v-model="newItem.name" label="Item" autofocus />
+          <q-input dense v-model="newItem.name" label="Item" autofocus type="text" />
           <br />
-          <q-input dense v-model="newItem.alley" label="Alley" />
+          <q-input dense v-model="newItem.alley" label="Alley" type="number" />
         </q-card-section>
 
         <q-card-actions align="right" class="text-primary">
