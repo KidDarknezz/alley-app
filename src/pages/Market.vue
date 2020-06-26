@@ -29,7 +29,7 @@
         </q-card-actions>
       </q-card>
     </q-dialog>
-    <q-page-sticky position="bottom-right" :offset="[18, 18]">
+    <q-page-sticky position="bottom-right" :offset="[18, 18]" v-if="param == 'p455w0rd'">
       <q-btn fab icon="add" color="accent" @click="prompt = true" />
     </q-page-sticky>
   </q-page>
@@ -45,7 +45,8 @@ export default {
       newItem: {
         name: "",
         alley: ""
-      }
+      },
+      param: ""
     };
   },
   methods: {
@@ -85,6 +86,10 @@ export default {
   },
   beforeMount() {
     this.getItems();
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    this.param = urlParams.get("pass");
+    console.log(this.param);
   }
 };
 </script>
