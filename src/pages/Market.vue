@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-pa-md">
     <div class="row q-mb-md">
-      <q-input filled v-model="search" label="Buscar" clearable class="full-width" />
+      <q-input filled v-model="search" label="Search" clearable class="full-width" />
     </div>
     <div>
       <q-list class="full-width" bordered separator>
